@@ -1,0 +1,92 @@
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+# url: "https://diverse-oasis.github.io"
+# baseurl: "/diverse-oasis"
+# repository: "diverse-oasis/diverse-oasis.github.io"
+title: Diverse Oasis
+email: diverse.oasis@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Diverse Oasis LLC provides property management for short and long term rentals.
+  This site has information about our properties, recommendations, etc.
+minimal_mistakes_skin: mint
+search: true
+
+# Build settings
+markdown: kramdown
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+atom_feed:
+  hide: true
+author:
+  name: "Diverse Oasis"
+  avatar: "/assets/images/header.jpg"
+  bio: "A fellow traveler who wants to provide the positive hospitality experiences I've enjoyed the most."
+  links:
+    - label: "Nadja Suite"
+      icon: "fab fa-airbnb"
+      url: "https://airbnb.com/h/nadjasuite"
+    - label: "AirBNB Profile"
+      icon: "fab fa-airbnb"
+      url: "https://www.airbnb.com/users/show/546024098"
+
+footer:
+  links:
+    - label: "AirBNB"
+      icon: "fab fa-airbnb"
+      url: "https://www.airbnb.com/users/show/546024098"
+    - label: "Nadja Suite"
+      icon: "fab fa-airbnb"
+      url: "https://airbnb.com/h/nadjasuite"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: true
+      share: false
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
